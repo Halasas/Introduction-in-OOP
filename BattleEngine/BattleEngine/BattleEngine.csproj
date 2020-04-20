@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4CA62313-B057-4812-8291-0493E49D362E}</ProjectGuid>
+    <ProjectGuid>{3D1BBBA1-D0B5-44F2-9191-F64C7506A95C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>task_1</RootNamespace>
-    <AssemblyName>task_1</AssemblyName>
+    <RootNamespace>BattleEngine</RootNamespace>
+    <AssemblyName>BattleEngine</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BattleController.cs" />
+    <Compile Include="BattleEntities.cs" />
+    <Compile Include="Effects.cs" />
+    <Compile Include="LAS.cs" />
+    <Compile Include="BaseEntities.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="task_1.cs" />
-    <Compile Include="task_2.cs" />
-    <Compile Include="task_3.cs" />
+    <Compile Include="Ability.cs" />
+    <Compile Include="UnitBuilder.cs" />
+    <Compile Include="Units.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Spell\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
