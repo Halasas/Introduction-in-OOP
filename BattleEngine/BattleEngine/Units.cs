@@ -41,10 +41,13 @@ namespace BattleEngine.Units
         private static Type[] GetTypesFromMods()
         {
             List<Type> types = new List<Type>();
-            foreach(var path in Directory.GetFiles("Mods\\"))
-            {
-                Assembly asm = Assembly.LoadFrom(path);
-                types.AddRange(asm.GetTypes());
+            if(Directory.Exists("Mods\\")) 
+            { 
+                foreach(var path in Directory.GetFiles("Mods\\"))
+                {
+                    Assembly asm = Assembly.LoadFrom(path);
+                    types.AddRange(asm.GetTypes());
+                }
             }
             return types.ToArray();
         }
